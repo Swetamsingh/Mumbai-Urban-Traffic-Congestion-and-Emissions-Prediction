@@ -1,0 +1,40 @@
+{
+  "model_name": "RandomForestRegressor",
+  "target": "traffic_speed_kmh",
+  "unit": "km/h",
+  "mae": 1.9455499999999926,
+  "rmse": 2.295666132447541,
+  "r2": 0.9357097878375084,
+  "validation": {
+    "mae": 2.016476190476184,
+    "rmse": 2.429414474822312
+  },
+  "baseline": {
+    "name": "previous_speed_or_training_median",
+    "mae": 4.126666666666666,
+    "rmse": 4.522536161639101
+  },
+  "validation_rows": 21,
+  "test_rows": 30,
+  "test_start": "2024-01-02T14:00:00",
+  "test_end": "2024-01-02T23:00:00",
+  "feature_columns": [
+    "hour",
+    "day_of_week",
+    "month",
+    "is_weekend",
+    "is_rush_hour",
+    "hour_sin",
+    "hour_cos",
+    "dayofweek_sin",
+    "dayofweek_cos",
+    "lag_1_speed",
+    "lag_2_speed",
+    "lag_3_speed",
+    "rolling_3_speed",
+    "rolling_6_speed",
+    "traffic_volume",
+    "temperature_c",
+    "rainfall_mm"
+  ]
+}

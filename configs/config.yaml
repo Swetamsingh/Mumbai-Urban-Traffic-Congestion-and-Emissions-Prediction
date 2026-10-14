@@ -1,0 +1,18 @@
+data:
+  input_path: "data/sample/sample_traffic.csv"
+  processed_path: "data/processed/traffic_clean.csv"
+  timestamp_column: "timestamp"
+  road_id_column: "road_segment_id"
+  target_column: "traffic_speed_kmh"
+  model_path: "models/traffic_speed_pipeline.joblib"
+  metrics_path: "reports/model_metrics.json"
+
+training:
+  test_fraction: 0.2
+  validation_fraction: 0.15
+  random_state: 42
+  model_type: "random_forest"
+
+congestion:
+  low_speed_max_kmh: 30
+  moderate_speed_min_kmh: 15
